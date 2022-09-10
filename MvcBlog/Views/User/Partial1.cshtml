@@ -1,0 +1,144 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Author>
+<div class="tab-pane" id="settings">
+    @using (Html.BeginForm("UpdateUserProfile", "User", FormMethod.Post))
+    { 
+    foreach (var x in Model)
+    {
+    <form class="form-horizontal">
+        <div class="form-group row">
+
+           
+
+            <div class="col-sm-10">
+
+                <input type="hidden" class="form-control" name="AuthorId" value="@x.AuthorId">
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+
+            <label for="inputName" class="col-sm-2 col-form-label">Ad Soyad</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" name="AuthorName" value="@x.AuthorName">
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+
+            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+
+            <div class="col-sm-10">
+
+                <input type="email" class="form-control" name="Mail" value="@x.Mail">
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+
+            <label for="inputName2" class="col-sm-2 col-form-label">Statü</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" name="AuthorTitle" value="@x.AuthorTitle">
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+
+            <label for="inputExperience" class="col-sm-2 col-form-label">Yetenekler</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" name="AboutShort" value="@x.AboutShort" />
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+
+            <label for="inputSkills" class="col-sm-2 col-form-label">Telefon</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" name="PhoneNumber" value="@x.PhoneNumber">
+
+            </div>
+
+        </div>
+        <div class="form-group row">
+
+            <label for="inputSkills" class="col-sm-2 col-form-label">Şifre</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" name="Password" value="@x.Password">
+
+            </div>
+
+        </div>
+      
+        <div class="form-group row">
+
+            <label for="inputSkills" class="col-sm-2 col-form-label">Fotoğraf</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" name="AuthorImage" value="@x.AuthorImage">
+
+            </div>
+
+        </div>
+        <div class="form-group row">
+
+            <label for="inputSkills" class="col-sm-2 col-form-label">Hakkımda</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" name="AuthorAbout" value="@x.AuthorAbout">
+
+            </div>
+
+        </div>
+        <div class="form-group row">
+
+            <div class="offset-sm-2 col-sm-10">
+
+                <div class="checkbox">
+
+                    <label>
+
+                        <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+
+            <div class="offset-sm-2 col-sm-10">
+
+                <button type="submit" class="btn btn-danger">Bilgilerimi Kaydet</button>
+
+            </div>
+
+        </div>
+
+    </form>
+    }
+    }
+</div>
